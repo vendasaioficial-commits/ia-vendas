@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IA VENDAS — Landing Page
 
 Landing page comercial do infoproduto **IA VENDAS**, construída com React + Vite + Tailwind CSS.
@@ -91,3 +92,6 @@ src/
 3. Preencha os dados legais e links do rodapé.
 4. Adicione uma imagem real em `public/og-image.png` para o compartilhamento em redes sociais (1200×630px).
 5. Rode `npm run build` e publique a pasta `dist/` na hospedagem de sua escolha.
+=======
+# ia-vendas
+>>>>>>> bd5a7af7fdba931e176eee7b6ac47fc59f8da39d
