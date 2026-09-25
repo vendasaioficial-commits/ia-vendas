@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-mist-100 font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-mist-100;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: #3ee0cf;
+    color: #08090b;
+  }
+
+  a, button {
+    outline-offset: 3px;
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #3ee0cf;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto max-w-content px-6 md:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-signal-400 px-7 py-3.5 text-sm font-semibold text-ink-950 transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink-500 px-7 py-3.5 text-sm font-medium text-mist-100 transition-colors duration-200 hover:border-signal-400 hover:text-signal-300;
+  }
+
+  .eyebrow {
+    @apply text-sm font-medium text-signal-300;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-600 bg-ink-800/60 p-6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
